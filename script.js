@@ -114,7 +114,7 @@ const notes = [
   {
     f: 294,
     d: 3,
-    t: 'js',
+    t: 'ja',
     p: p3,
   },
 
