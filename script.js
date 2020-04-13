@@ -5,166 +5,166 @@ const notes = [
     f: 262,
     d: 0.5,
     t: 'Hap',
-    p: p1
+    p: p1,
   },
   {
     f: 262,
     d: 0.5,
     t: 'py&nbsp;',
-    p: p1
+    p: p1,
   },
   {
     f: 294,
     d: 1,
     t: 'Birth',
-    p: p1
+    p: p1,
   },
   {
     f: 262,
     d: 1,
     t: 'day&nbsp;',
-    p: p1
+    p: p1,
   },
   {
     f: 349,
     d: 1,
     t: 'To&nbsp;',
-    p: p1
+    p: p1,
   },
   {
     f: 330,
     d: 2,
     t: 'You',
-    p: p1
+    p: p1,
   },
 
   {
     f: 262,
     d: 0.5,
     t: 'Hap',
-    p: p2
+    p: p2,
   },
   {
     f: 262,
     d: 0.5,
     t: 'py&nbsp;',
-    p: p2
+    p: p2,
   },
   {
     f: 294,
     d: 1,
     t: 'Birth',
-    p: p2
+    p: p2,
   },
   {
     f: 262,
     d: 1,
     t: 'day&nbsp;',
-    p: p2
+    p: p2,
   },
   {
     f: 392,
     d: 1,
     t: 'To&nbsp;',
-    p: p2
+    p: p2,
   },
   {
     f: 349,
     d: 2,
     t: 'You',
-    p: p2
+    p: p2,
   },
 
   {
     f: 262,
     d: 0.5,
     t: 'Hap',
-    p: p3
+    p: p3,
   },
   {
     f: 262,
     d: 0.5,
     t: 'py&nbsp;',
-    p: p3
+    p: p3,
   },
   {
     f: 523,
     d: 1,
     t: 'Birth',
-    p: p3
+    p: p3,
   },
   {
     f: 440,
     d: 1,
     t: 'day&nbsp;',
-    p: p3
+    p: p3,
   },
   {
     f: 349,
     d: 1,
     t: 'Dear&nbsp;',
-    p: p3
+    p: p3,
   },
   {
     f: 330,
     d: 1,
-    t: 'Sanan',
-    p: p3
+    t: 'Pu',
+    p: p3,
   },
   {
     f: 294,
     d: 3,
-    t: 'da',
-    p: p3
+    t: 'js',
+    p: p3,
   },
 
   {
     f: 466,
     d: 0.5,
     t: 'Hap',
-    p: p4
+    p: p4,
   },
   {
     f: 466,
     d: 0.5,
     t: 'py&nbsp;',
-    p: p4
+    p: p4,
   },
   {
     f: 440,
     d: 1,
     t: 'Birth',
-    p: p4
+    p: p4,
   },
   {
     f: 349,
     d: 1,
     t: 'day&nbsp;',
-    p: p4
+    p: p4,
   },
   {
     f: 392,
     d: 1,
     t: 'To&nbsp;',
-    p: p4
+    p: p4,
   },
   {
     f: 349,
     d: 2,
     t: 'You',
-    p: p4
+    p: p4,
   },
 
   {
     f: 0,
     d: 3,
     t: '- Sounak',
-    p: p5
-  }
+    p: p5,
+  },
 ];
 
 //DOM
-notes.map(n => createSpan(n));
+notes.map((n) => createSpan(n));
 
 function createSpan(n) {
   n.sp = document.createElement('span');
@@ -241,7 +241,7 @@ for (let i = 0; i < notes.length; i++) {
 // EVENTS
 wishes.addEventListener(
   'click',
-  function(e) {
+  function (e) {
     if (e.target.id != 'inputSpeed' && !flag) {
       sounds[0].play();
       flag = true;
@@ -252,9 +252,9 @@ wishes.addEventListener(
 
 inputSpeed.addEventListener(
   'input',
-  function(e) {
+  function (e) {
     speed = this.value;
-    sounds.map(s => {
+    sounds.map((s) => {
       s.speed = s.dur * speed;
     });
   },
@@ -321,7 +321,7 @@ function Draw() {
   requestId = window.requestAnimationFrame(Draw);
   //ctx.globalAlpha=0.65;
   ctx.clearRect(0, 0, cw, ch);
-  particles.map(p => {
+  particles.map((p) => {
     p.rot += p.rotSpeed;
     p.update();
     p.draw();
@@ -341,7 +341,7 @@ function Init() {
   Draw();
 }
 
-setTimeout(function() {
+setTimeout(function () {
   Init();
   window.addEventListener('resize', Init, false);
 }, 15);
