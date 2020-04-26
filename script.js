@@ -108,13 +108,13 @@ const notes = [
   {
     f: 330,
     d: 1,
-    t: 'Pu',
+    t: 'Sanan',
     p: p3,
   },
   {
     f: 294,
     d: 3,
-    t: 'ja',
+    t: 'da',
     p: p3,
   },
 
